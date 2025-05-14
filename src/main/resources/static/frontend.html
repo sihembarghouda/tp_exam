@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gestion des Livres</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#books">Livres</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="home">
+        <h1>Bienvenue sur l'Application de Gestion des Livres</h1>
+        <p>Consulter, ajouter, modifier et supprimer des livres dans notre base de données.</p>
+    </section>
+
+    <section id="books">
+        <h2>Liste des Livres</h2>
+
+        <table id="books-table">
+            <thead>
+            <tr>
+                <th>ISBN</th>
+                <th>Titre</th>
+                <th>Auteur</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Les lignes de livres seront insérées ici dynamiquement -->
+            </tbody>
+        </table>
+
+        <button id="add-book-btn">Ajouter un Livre</button>
+
+        <!-- Formulaire d'ajout de livre -->
+        <div id="add-book-form" style="display:none;">
+            <h3>Ajouter un Livre</h3>
+            <form id="book-form">
+                <label for="isbn">ISBN</label>
+                <input type="text" id="isbn" name="isbn" required>
+
+                <label for="title">Titre</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="author">Auteur</label>
+                <input type="text" id="author" name="author" required>
+
+                <button type="submit">Ajouter</button>
+                <button type="button" id="cancel-btn">Annuler</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Si vous avez des questions, contactez-nous à <a href="mailto:contact@livres.com">contact@livres.com</a></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Gestion des Livres. Tous droits réservés.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
